@@ -1,0 +1,31 @@
+{
+    "name": "Hello Seattle",
+    "version": "1.0",
+    "manifest_version": 2,
+    "description": "leetcode 自动跳转",
+    "page_action": {
+        "default_icon": {
+            "19": "icons/helloseattle19.png",
+            "38": "icons/helloseattle76.png"
+        },
+        "default_title": "看你麻痹，刷题去！"
+    },
+    "icons": {
+
+        "16": "icons/helloseattle16.png",
+        "19": "icons/helloseattle19.png",
+        "38": "icons/helloseattle76.png",
+        "48": "icons/helloseattle48.png",
+        "128": "icons/helloseattle128.png"
+
+    },
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "permissions": ["http://*.bilibili.com/*","http://*.acfun.tv/*","http://*.weibo.com/*", "tabs", "storage"],
+    "content_scripts": [{
+        "css": ["helloseattle.css"],
+        "js": ["helloseattle.js"],
+        "matches": ["http://*.bilibili.com/*","http://*.acfun.tv/*","http://*.weibo.com/*","http://*.facebook.com/*","http://*.twitter.com/*","http://*.youtube.com/*"]
+    }]
+}
