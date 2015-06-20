@@ -10,12 +10,26 @@ hello seattle
 2. 在上面把“开发者模式”前面复选框打勾勾
 3. “加载正在开发的扩展程序”， 找到这个repo下的helloseattle文件夹，确定
 4. 可以使用了
-5. 
+
 ###配置方法
 鉴于直接使用源代码安装了，就直接改源代码配置
 
 ####配置要跳转到的的页面
 在 ./helloseattle.js 中， *url*指要跳转到的网址，默认为leetcode，因为我第二遍还没刷完 ^_^
+
+```javascript
+var helloseattle = {
+    url: "https://leetcode.com/problemset/algorithms/",
+    redirect:function(){
+        alert("你女票等着你呢，看你麻痹，刷题去！");
+        alert("快去啊！")
+        window.location.href = helloseattle.url;
+    }
+}
+
+helloseattle.redirect();
+```
+
 
 ####配置要block的网站
 在./manifest.json中
