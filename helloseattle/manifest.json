@@ -2,7 +2,7 @@
     "name": "Hello Seattle",
     "version": "1.0",
     "manifest_version": 2,
-    "description": "leetcode 自动跳转",
+    "description": "看你麻痹，刷题去！",
     "page_action": {
         "default_icon": {
             "19": "icons/helloseattle19.png",
@@ -22,7 +22,7 @@
     "background": {
         "scripts": ["background.js"]
     },
-    "permissions": ["http://*.bilibili.com/*","http://*.acfun.tv/*","http://*.weibo.com/*", "tabs", "storage"],
+    "permissions": ["tabs", "storage"],
     "content_scripts": [{
         "css": ["helloseattle.css"],
         "js": ["helloseattle.js"],
